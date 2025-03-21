@@ -1,0 +1,30 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "debug ag-common-module",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm run debug"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "ag-common-module",
+      "args": ["${workspaceFolder}/src/main.ts"],
+      "runtimeExecutable": "nodemon",
+      "sourceMaps": true,
+      "cwd": "${workspaceRoot}"
+      // "runtimeArgs": [
+      //   "--nolazy",
+      //   "-r",
+      //   "ts-node/register",
+      //   "-r",
+      //   "tsconfig-paths/register"
+      // ]
+    }
+  ]
+}
