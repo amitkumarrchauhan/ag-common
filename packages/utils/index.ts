@@ -1,1 +1,0 @@
-import { check } from './check';

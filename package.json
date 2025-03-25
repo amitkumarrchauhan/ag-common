@@ -3,7 +3,9 @@
   "private": true,
   "dependencies": {},
   "scripts": {
-    "lerna-version": "./node_modules/.bin/lerna version --no-private"
+    "lerna-version": "./node_modules/.bin/lerna version --no-private",
+    "build-util": "cd packages/utils && pnpm build",
+    "publish-util": "cd packages/utils && pnpm publish"
   },
   "devDependencies": {
     "lerna": "^8.2.1"
