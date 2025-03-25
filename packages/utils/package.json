@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "common utilities for javascript project based on nextjs, nestjs project where interaction with discovery services required",
   "type": "module",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsc -w",
@@ -22,6 +23,7 @@
   "author": "Amitkumar Chauhan",
   "license": "MIT",
   "devDependencies": {
+    "glob": "^11.0.1",
     "rollup": "^4.37.0",
     "typescript": "^5.8.2"
   },
