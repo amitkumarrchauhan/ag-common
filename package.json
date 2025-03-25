@@ -1,0 +1,11 @@
+{
+  "name": "ag-common",
+  "private": true,
+  "dependencies": {},
+  "scripts": {
+    "build": "lerna run build"
+  },
+  "devDependencies": {
+    "lerna": "^8.2.1"
+  }
+}
