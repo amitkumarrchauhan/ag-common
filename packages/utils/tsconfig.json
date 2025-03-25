@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
     "baseUrl": "./packages",
+    "declaration": true,
+    "declarationDir": "./types",
+    // "declarationMap": true,
+    "outDir": "./dist",
     "paths": {
       "@test/*": ["./*/src"]
     }
