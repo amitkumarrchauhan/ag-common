@@ -1,5 +1,5 @@
 {
-  "name": "ag-common-utils",
+  "name": "@ag-common/utils",
   "version": "0.0.1",
   "description": "common utilities for javascript project based on nextjs, nestjs project where interaction with discovery services required",
   "main": "dist/index.js",

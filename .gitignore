@@ -1,1 +1,13 @@
+# packages & build dir
 node_modules/
+dist/
+build/
+
+# test coverage dir
+coverage/
+
+#logs
+*.log
+*.log.*
+*.log-*
+*.log/*
