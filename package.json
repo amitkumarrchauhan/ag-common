@@ -1,11 +1,11 @@
 {
   "name": "ag-common",
-  "private": true,
+  "private": false,
   "dependencies": {},
   "scripts": {
     "lerna-version": "./node_modules/.bin/lerna version --no-private",
-    "build-util": "cd packages/utils && pnpm build",
-    "publish-util": "cd packages/utils && pnpm publish"
+    "build-util": "cd packages/utils && pnpm run build",
+    "publish-util": "cd packages/utils && pnpm run publish"
   },
   "devDependencies": {
     "lerna": "^8.2.1"
