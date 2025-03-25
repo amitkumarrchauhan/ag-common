@@ -1,1 +1,1 @@
-export declare const check: () => string;
+export { check } from './check';
