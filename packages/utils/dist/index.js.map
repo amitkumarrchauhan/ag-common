@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.ts"],"sourcesContent":["export const check = (): string => {\n  return 'check successful, everything is working fine.';\n}"],"names":["check"],"mappings":"AAAA,OAAO,IAAMA,MAAQ,WACnB,MAAO,+CACT,CAAC"}
