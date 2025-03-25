@@ -2,8 +2,6 @@
   "$schema": "https://swc.rs/schema.json",
   "minify": true,
   "sourceMaps": true,
-  "outputPath": "dist",
-  "filename": "index.ts",
   "jsc": {
     "parser": {
       // "syntax": "ecmascript",
