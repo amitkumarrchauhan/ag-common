@@ -7,7 +7,5 @@ export { _check as check, Logger };
 // }
 
 (function () {
-  const logger = Logger.getLogger("index.ts");
-
-  logger.log("This is the main entry point of utils package");
+  console.log("This is the main entry point of utils package");
 })();

@@ -15,7 +15,7 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 const config = {
     entry: {
         index: './src/index.ts',
-        check: './src/check/index.ts',
+        // check: './src/check/index.ts',
       },
     output: {
         path: path.resolve(__dirname, 'dist'),
