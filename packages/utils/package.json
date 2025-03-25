@@ -9,11 +9,11 @@
     "dev": "tsc -w",
     "build": "",
     "prepublishOnly": "tsc && rollup -c",
-    "publish": "pnpm publish --access public",
+    "publish": "cp package.json rollup.config.js ./build/ && pnpm publish --access public",
     "//build": "npx swc src -d dist --strip-leading-paths && cp -rf ./types/** ./package.json dist/"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "directory": "build"
   },
   "files": [
     "index.js",
