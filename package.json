@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {},
   "scripts": {
-    "build": "lerna run build"
+    "lerna-version": "./node_modules/.bin/lerna version --no-private"
   },
   "devDependencies": {
     "lerna": "^8.2.1"
