@@ -1,12 +1,25 @@
 {
   "compilerOptions": {
-    "baseUrl": "./packages",
-    "declaration": true,
-    "declarationDir": "./types",
-    // "declarationMap": true,
     "outDir": "./dist",
-    "paths": {
-      "@test/*": ["./*/src"]
-    }
-  }
+    "module": "es6",
+    "target": "es5",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "sourceMap": true,
+    "allowJs": false,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDirs": [
+      "src"
+    ],
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true
+  },
+  "include": [
+    "src/**/*"
+  ]
 }

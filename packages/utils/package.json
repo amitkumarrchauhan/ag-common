@@ -5,17 +5,22 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.js"
     }
   },
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "//build": "npx swc src -d dist --strip-leading-paths && cp -rf ./types/** ./package.json dist/",
-    "build": "tsc && cp -rf ./types/** ./package.json dist/",
-    "publish": "pnpm publish --access public"
+    "dev": "tsc -p tsconfig.declaration.json && tsc -w",
+    "build": "tsc && cp -rf ./package.json dist/",
+    "publish": "pnpm publish --access public",
+    "//build": "npx swc src -d dist --strip-leading-paths && cp -rf ./types/** ./package.json dist/"
   },
   "publishConfig": {
     "directory": "dist"
@@ -24,7 +29,6 @@
   "author": "Amitkumar Chauhan",
   "license": "MIT",
   "devDependencies": {
-    "tsc": "^2.0.4",
     "typescript": "^5.8.2"
   },
   "repository": {
