@@ -1,12 +1,12 @@
 {
   "name": "@ag-common/utils",
   "version": "0.0.1",
-  "description": "",
+  "description": "common utilities for javascript project based on nextjs, nestjs project where interaction with discovery services required",
   "main": "dist/index.js",
   "scripts": {
     "//test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx swc src -d dist --strip-leading-paths && cp package.json -f dist/",
-    "publish": "pnpm build && pnpm publish",
+    "publish": "pnpm publish --access public",
     "//build": "pnpm build:modern && pnpm build:node && pnpm build:stable && pnpm build:types && pnpm build:copy-files",
     "//build:modern": "node ../../scripts/build.mjs modern",
     "//build:node": "node ../../scripts/build.mjs node",
@@ -23,11 +23,19 @@
     "directory": "dist"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Amitkumar Chauhan",
+  "license": "MIT",
   "devDependencies": {
     "@swc/cli": "^0.6.0",
     "@swc/core": "^1.11.13",
     "typescript": "^5.8.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/amitkumarrchauhan/ag-common.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amitkumarrchauhan/ag-common/issues"
+  },
+  "homepage": "https://github.com/amitkumarrchauhan/ag-common#readme"
 }
