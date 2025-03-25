@@ -4,7 +4,9 @@
     "noImplicitAny": true,
     "module": "es6",
     "target": "es5",
-    "allowJs": true
+    "allowJs": true,
+    "outDir": "dist",
+    // "outFile": "dist/utils.js"
   },
   "files": ["src/index.ts"]
 }
