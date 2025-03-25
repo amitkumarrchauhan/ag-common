@@ -2,6 +2,7 @@
   "name": "@ag-common/utils",
   "version": "0.0.2",
   "description": "common utilities for javascript project based on nextjs, nestjs project where interaction with discovery services required",
+  "type": "module",
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
