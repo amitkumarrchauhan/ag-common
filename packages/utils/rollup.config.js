@@ -7,27 +7,35 @@ import { fileURLToPath } from 'node:url';
 export default [
   {
     input: Object.fromEntries(
-      globSync('dist/**/*.js').map(file => [
-        // This removes `src/` as well as the file extension from each
-        // file, so e.g. src/nested/foo.js becomes nested/foo
-        path.relative(
+      globSync('dist/**/*.js').map(file => {
+        const distJsPath = path.relative(
           'dist',
           file.slice(0, file.length - path.extname(file).length)
-        ),
+        );
+        const fileUrlToPathValue = fileURLToPath(new URL(file, import.meta.url));
+
+        console.log('distJsPath: ', distJsPath + '\n');
+        console.log('fileUrlToPathValue: ', fileUrlToPathValue + '\n');
+
+        return [
+        // This removes `src/` as well as the file extension from each
+        // file, so e.g. src/nested/foo.js becomes nested/foo
+        distJsPath,
         // This expands the relative paths to absolute paths, so e.g.
         // src/nested/foo becomes /project/src/nested/foo.js
-        fileURLToPath(new URL(file, import.meta.url))
-      ])
+        fileUrlToPathValue
+      ]
+    })
     ),
     output: {
       format: 'es',
-      dir: 'dist'
+      dir: 'build'
     }
   },
   {
     input: 'dist/index.d.ts',
     output: {
-        file: 'index.d.ts'
+        file: 'build/index.d.ts'
     },
     plugins: [dts()]
   }
