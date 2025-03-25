@@ -1,8 +1,9 @@
 {
   "version": "1.0.0",
-  "description": "My webpack project",
+  "description": "common utilities for ts project",
   "name": "@ag-common/utils",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
@@ -10,6 +11,7 @@
     "watch": "webpack --watch"
   },
   "devDependencies": {
+    "@types/node": "^22.13.13",
     "ajv": "^8.17.1",
     "autoprefixer": "^10.4.21",
     "css-loader": "^7.1.2",
