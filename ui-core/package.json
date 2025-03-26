@@ -72,7 +72,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "prepublish": "babel --extensions .ts,.tsx src --out-dir dist --verbose --source-type=module",
+    "prepublish": "babel --extensions .ts,.tsx src --out-dir dist --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module",
     "//prepublish": "babel src/ui-core.ts --out-dir dist --copy-files --verbose --source-type=module"
   },
   "eslintConfig": {

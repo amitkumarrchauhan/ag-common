@@ -5,11 +5,11 @@ module.exports = function (api) {
   
   const presets = ["@babel/preset-env", "@babel/preset-typescript"];
   const plugins = [];
-  const exclude = ['*.test.*'];
+  const ignore = ['**/*.test.ts', '**/*.test.js'];  // not working
 
   return {
     presets,
     plugins,
-    exclude,
+    ignore
   };
 }
