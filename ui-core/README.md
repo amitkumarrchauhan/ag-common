@@ -1,3 +1,21 @@
+# Before you start
+
+This project depends on local/in-house packages ag-common/**->
+
+go to ./node_modules/.pnpm folder and delete file+..ag-common*
+
+```
+cd ./node_modules/.pnpm
+rm -rf file+..+ag-common+ui-*
+```
+
+then create a soft link to ../../ag-common/ui-core, make sure that this is present
+
+```
+ln -s ../../ag-common/ui-core ui-core
+```
+keep the watcher on in ui-core & start the current dev server & now you are ready for development
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
