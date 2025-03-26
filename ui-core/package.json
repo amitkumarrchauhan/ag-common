@@ -2,12 +2,15 @@
   "name": "ui-core",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/ui-core.js",
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.27.0",
     "@babel/core": "^7.16.0",
+    "@babel/preset-typescript": "^7.27.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/dom": "^10.4.0",
@@ -68,7 +71,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "prepublish": "babel src --out-dir dist --copy-files --verbose --source-type=module"
   },
   "eslintConfig": {
     "extends": [
@@ -138,10 +142,5 @@
       "jest-watch-typeahead/testname"
     ],
     "resetMocks": true
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
   }
 }
