@@ -1,8 +1,15 @@
-const presets = [
-  [
-    '@babel/preset-env',
-    'react-app',
-  ],
-];
+module.exports = function (api) {
+  api.cache(true);
 
-module.exports = { presets };
+  console.log('*** babel.config.js loaded ***');
+  
+  const presets = ["@babel/preset-env", "@babel/preset-typescript"];
+  const plugins = [];
+  const exclude = ['*.test.*'];
+
+  return {
+    presets,
+    plugins,
+    exclude,
+  };
+}
