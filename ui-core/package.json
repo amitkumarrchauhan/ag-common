@@ -1,7 +1,6 @@
 {
   "name": "ui-core",
   "version": "0.1.0",
-  "private": true,
   "main": "dist/ui-core.js",
   "dependencies": {
     "react": "^19.0.0",
@@ -72,7 +71,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "prepublish": "babel --extensions .ts,.tsx src --out-dir dist --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module",
+    "prepublish": "rm -rf dist/ && babel ./src --out-dir ./dist --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
     "//prepublish": "babel src/ui-core.ts --out-dir dist --copy-files --verbose --source-type=module"
   },
   "eslintConfig": {
