@@ -6,6 +6,193 @@ settings:
 
 importers:
 
+  ui-components:
+    dependencies:
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+    devDependencies:
+      '@babel/cli':
+        specifier: ^7.27.0
+        version: 7.27.0(@babel/core@7.26.10)
+      '@babel/core':
+        specifier: ^7.16.0
+        version: 7.26.10
+      '@babel/preset-typescript':
+        specifier: ^7.27.0
+        version: 7.27.0(@babel/core@7.26.10)
+      '@pmmmwh/react-refresh-webpack-plugin':
+        specifier: ^0.5.3
+        version: 0.5.15(react-refresh@0.11.0)(webpack-dev-server@4.15.2)(webpack@5.98.0)
+      '@svgr/webpack':
+        specifier: ^5.5.0
+        version: 5.5.0
+      '@testing-library/dom':
+        specifier: ^10.4.0
+        version: 10.4.0
+      '@testing-library/jest-dom':
+        specifier: ^6.6.3
+        version: 6.6.3
+      '@testing-library/react':
+        specifier: ^16.2.0
+        version: 16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.4)(@types/react@19.0.12)(react-dom@19.0.0)(react@19.0.0)
+      '@testing-library/user-event':
+        specifier: ^13.5.0
+        version: 13.5.0(@testing-library/dom@10.4.0)
+      '@types/jest':
+        specifier: ^27.5.2
+        version: 27.5.2
+      '@types/node':
+        specifier: ^16.18.126
+        version: 16.18.126
+      '@types/react':
+        specifier: ^19.0.12
+        version: 19.0.12
+      '@types/react-dom':
+        specifier: ^19.0.4
+        version: 19.0.4(@types/react@19.0.12)
+      babel-jest:
+        specifier: ^27.4.2
+        version: 27.5.1(@babel/core@7.26.10)
+      babel-loader:
+        specifier: ^8.2.3
+        version: 8.4.1(@babel/core@7.26.10)(webpack@5.98.0)
+      babel-plugin-named-asset-import:
+        specifier: ^0.3.8
+        version: 0.3.8(@babel/core@7.26.10)
+      babel-preset-react-app:
+        specifier: ^10.0.1
+        version: 10.1.0
+      bfj:
+        specifier: ^7.0.2
+        version: 7.1.0
+      browserslist:
+        specifier: ^4.18.1
+        version: 4.24.4
+      camelcase:
+        specifier: ^6.2.1
+        version: 6.3.0
+      case-sensitive-paths-webpack-plugin:
+        specifier: ^2.4.0
+        version: 2.4.0
+      css-loader:
+        specifier: ^6.5.1
+        version: 6.11.0(webpack@5.98.0)
+      css-minimizer-webpack-plugin:
+        specifier: ^3.2.0
+        version: 3.4.1(webpack@5.98.0)
+      dotenv:
+        specifier: ^10.0.0
+        version: 10.0.0
+      dotenv-expand:
+        specifier: ^5.1.0
+        version: 5.1.0
+      eslint:
+        specifier: ^8.3.0
+        version: 8.57.1
+      eslint-config-react-app:
+        specifier: ^7.0.1
+        version: 7.0.1(@babel/plugin-syntax-flow@7.26.0)(@babel/plugin-transform-react-jsx@7.25.9)(eslint@8.57.1)(jest@27.5.1)(typescript@4.9.5)
+      eslint-webpack-plugin:
+        specifier: ^3.1.1
+        version: 3.2.0(eslint@8.57.1)(webpack@5.98.0)
+      file-loader:
+        specifier: ^6.2.0
+        version: 6.2.0(webpack@5.98.0)
+      fs-extra:
+        specifier: ^10.0.0
+        version: 10.1.0
+      html-webpack-plugin:
+        specifier: ^5.5.0
+        version: 5.6.3(webpack@5.98.0)
+      identity-obj-proxy:
+        specifier: ^3.0.0
+        version: 3.0.0
+      jest:
+        specifier: ^27.4.3
+        version: 27.5.1
+      jest-resolve:
+        specifier: ^27.4.2
+        version: 27.5.1
+      jest-watch-typeahead:
+        specifier: ^1.0.0
+        version: 1.1.0(jest@27.5.1)
+      mini-css-extract-plugin:
+        specifier: ^2.4.5
+        version: 2.9.2(webpack@5.98.0)
+      postcss:
+        specifier: ^8.4.4
+        version: 8.5.3
+      postcss-flexbugs-fixes:
+        specifier: ^5.0.2
+        version: 5.0.2(postcss@8.5.3)
+      postcss-loader:
+        specifier: ^6.2.1
+        version: 6.2.1(postcss@8.5.3)(webpack@5.98.0)
+      postcss-normalize:
+        specifier: ^10.0.1
+        version: 10.0.1(browserslist@4.24.4)(postcss@8.5.3)
+      postcss-preset-env:
+        specifier: ^7.0.1
+        version: 7.8.3(postcss@8.5.3)
+      prompts:
+        specifier: ^2.4.2
+        version: 2.4.2
+      react-app-polyfill:
+        specifier: ^3.0.0
+        version: 3.0.0
+      react-dev-utils:
+        specifier: ^12.0.1
+        version: 12.0.1(eslint@8.57.1)(typescript@4.9.5)(webpack@5.98.0)
+      react-refresh:
+        specifier: ^0.11.0
+        version: 0.11.0
+      resolve:
+        specifier: ^1.20.0
+        version: 1.22.10
+      resolve-url-loader:
+        specifier: ^4.0.0
+        version: 4.0.0
+      sass-loader:
+        specifier: ^12.3.0
+        version: 12.6.0(webpack@5.98.0)
+      semver:
+        specifier: ^7.3.5
+        version: 7.7.1
+      source-map-loader:
+        specifier: ^3.0.0
+        version: 3.0.2(webpack@5.98.0)
+      style-loader:
+        specifier: ^3.3.1
+        version: 3.3.4(webpack@5.98.0)
+      tailwindcss:
+        specifier: ^3.0.2
+        version: 3.4.17
+      terser-webpack-plugin:
+        specifier: ^5.2.5
+        version: 5.3.14(webpack@5.98.0)
+      typescript:
+        specifier: ^4.9.5
+        version: 4.9.5
+      web-vitals:
+        specifier: ^2.1.4
+        version: 2.1.4
+      webpack:
+        specifier: ^5.64.4
+        version: 5.98.0
+      webpack-dev-server:
+        specifier: ^4.6.0
+        version: 4.15.2(webpack@5.98.0)
+      webpack-manifest-plugin:
+        specifier: ^4.0.2
+        version: 4.1.1(webpack@5.98.0)
+      workbox-webpack-plugin:
+        specifier: ^6.4.1
+        version: 6.6.0(webpack@5.98.0)
+
   ui-core:
     dependencies:
       react:
