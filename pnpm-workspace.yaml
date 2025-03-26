@@ -1,3 +1,2 @@
-# https://pnpm.io/workspaces#pnpm-workspaceyaml
 packages:
-  - "packages/*"
+  - ui-core
