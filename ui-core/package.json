@@ -2,6 +2,7 @@
   "name": "@ag-common/ui-core",
   "version": "0.1.0",
   "main": "dist/ui-core.js",
+  "types": "dist/ui-core.d.ts",
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -71,7 +72,9 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "prepublish": "rm -rf dist/ && babel ./src --out-dir ./dist --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
+    "declare": "tsc -p tsconfig.declaration.json",
+    "dev": "rm -rf dist/ && pnpm run declare && babel ./src --out-dir ./dist --watch --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
+    "prepublish": "rm -rf dist/ && pnpm run declare && babel ./src --out-dir ./dist --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
     "//prepublish": "babel src/ui-core.ts --out-dir dist --copy-files --verbose --source-type=module"
   },
   "eslintConfig": {
