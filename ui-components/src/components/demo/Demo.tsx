@@ -10,6 +10,6 @@ export const Demo = () => {
   console.log('Demo component rendered');
 
   return (
-    <div>Demo Component</div>
+    <div className=" ag-btn ag-btn-primary">Demo Component</div>
   );
 }

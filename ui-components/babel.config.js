@@ -3,7 +3,7 @@ module.exports = function (api) {
 
   console.log('*** babel.config.js loaded ***');
   
-  const presets = ["@babel/preset-env", "@babel/preset-typescript"];
+  const presets = ["react-app", "@babel/preset-typescript"];
   const plugins = [];
   const ignore = ['**/*.test.ts', '**/*.test.js'];  // not working
 
