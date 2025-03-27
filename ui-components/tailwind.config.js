@@ -10,11 +10,14 @@ const dasyUiPluginOptions = {
   prefix: 'ag-',
 };
 
+const tailwindPostCssPlugin = require('@tailwindcss/postcss');
+const daisyUiPlugin = require('daisyui')(dasyUiPluginOptions);
+
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
     extend: {},
   },
-  plugins: [require('daisyui')(dasyUiPluginOptions)],
-  daisyui: dasyUiPluginOptions
+  plugins: [tailwindPostCssPlugin, daisyUiPlugin],
+  daisyui: dasyUiPluginOptions,
 };

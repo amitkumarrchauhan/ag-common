@@ -1,15 +1,15 @@
-'use server'
+"use server";
 
 // import Eureka from 'eureka-js-client';
-import { Eureka } from 'eureka-js-client';
-import { EurekServerConfig } from '../definitions/discovery.type';
-import { Logger } from '../logger/Logger';
+import { Eureka } from "eureka-js-client";
+import { EurekServerConfig } from "../definitions/discovery.type";
+import { Logger } from "../logger/Logger";
 
 export const check = (name: string): string => {
-  return `Hello ${name}, core-utils is working fine, cheers ... :)`
-}
+  return `Hello ${name}, core-utils is working fine, cheers ... :)`;
+};
 
-const logger = Logger.getLogger('core-util:eureka.client');
+const logger = Logger.getLogger("core-util:eureka.client");
 
 // Or, if you're not using a transpiler:
 // const Eureka = require('eureka-js-client').Eureka;
@@ -19,7 +19,7 @@ export type EurekaClientConfig = {
 };
 
 const eurekaServerPort = parseInt(
-  (process.env.APP_DISVOVERY_SERVER_PORT || 8761) + ''
+  (process.env.APP_DISVOVERY_SERVER_PORT || 8761) + ""
 );
 
 logger.log(
@@ -34,7 +34,7 @@ const EurekaClient = {
     serverConfig?: EurekServerConfig | undefined
   ) => {
     try {
-      logger.log('Initializing Eureka Client ...', clientConfig);
+      logger.log("Initializing Eureka Client ...", clientConfig);
       const { port, appName } = clientConfig;
       const eurekaServerConfig = new EurekServerConfig({
         port: eurekaServerPort,
@@ -42,7 +42,7 @@ const EurekaClient = {
       } as EurekServerConfig);
 
       logger.log(
-        'client is connected to Eureka Server with Port: ',
+        "client is connected to Eureka Server with Port: ",
         eurekaServerConfig.port
       );
 
@@ -52,16 +52,16 @@ const EurekaClient = {
           instanceId: `${appName}:${port}`,
           app: appName,
           homePageUrl: `http://localhost:${port}`,
-          hostName: 'localhost',
-          ipAddr: '127.0.0.1',
+          hostName: "localhost",
+          ipAddr: "127.0.0.1",
           port: {
             $: port,
-            '@enabled': true,
+            "@enabled": true,
           },
           vipAddress: appName, /// this is checked by discovery server
           dataCenterInfo: {
-            '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
-            name: 'MyOwn',
+            "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+            name: "MyOwn",
           },
         },
         eureka: {
@@ -72,31 +72,31 @@ const EurekaClient = {
         },
       });
       // create eureka client and register with eureka server
-      logger.log('Initialization Eureka Client completed.\n');
-      logger.log('Starting Eureka Client ...');
+      logger.log("Initialization Eureka Client completed.\n");
+      logger.log("Starting Eureka Client ...");
       client.start((err, ...rest) => {
         if (err) {
           logger.log(
-            '\nEureka Client failed to register !!!\n --- \n',
+            "\nEureka Client failed to register !!!\n --- \n",
             err.message,
-            '\n --- \n',
+            "\n --- \n",
             err.name,
-            '\n --- \n',
+            "\n --- \n",
             rest
           );
           return;
         }
 
-        logger.log('Eureka Client registered successfully.');
+        logger.log("Eureka Client registered successfully.");
       });
     } catch (error) {
-      logger.log('Error occurred !!!', error);
+      logger.log("Error occurred !!!", error);
     }
   },
 
   start: () => {
     if (!client) {
-      throw new Error('Eureka Client not initialized !!!');
+      throw new Error("Eureka Client not initialized !!!");
     }
 
     client.start();

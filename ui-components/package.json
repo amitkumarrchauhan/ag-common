@@ -2,6 +2,9 @@
   "name": "@ag-common/ui-components",
   "version": "0.1.0",
   "main": "dist/ui-components.js",
+  "files": [
+    "global.css"
+  ],
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.17",
     "clsx": "^2.1.1",
