@@ -1,11 +1,11 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "module": "CommonJS",
     "isolatedModules": false,
     "declaration": true,
     "noEmit": false,
     "emitDeclarationOnly": true,
-    // "outDir": "./dist",
-    "outFile": "./dist/ui-components.d.ts"
+    "outDir": "./dist",
   }
 }
