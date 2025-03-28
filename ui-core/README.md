@@ -16,6 +16,54 @@ ln -s ../../ag-common/ui-core ui-core
 ```
 keep the watcher on in ui-core & start the current dev server & now you are ready for development
 
+# Setting up eslint and prettier
+
+## Setup eslint
+1. install the following dev dependencies
+    ```
+    pnpm install @eslint/eslintrc @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
+    ```
+2. create eslint.config.mjs file in root project with following configuration
+    ```
+    import { FlatCompat } from '@eslint/eslintrc';
+    import { dirname } from 'path';
+    import { fileURLToPath } from 'url';
+
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = dirname(__filename);
+
+    const compat = new FlatCompat({
+      baseDirectory: __dirname,
+    });
+
+    const eslintConfig = [
+      ...compat.extends('react-app', 'react-app/jest'),
+      {
+        rules: {
+          '@typescript-eslint/no-unused-vars': 'warn',
+        },
+      },
+    ];
+
+    export default eslintConfig;
+    ```
+## Setup prettier
+1. install the following dev dependencies
+   ```
+   pnpm install --save-dev prettier
+   ```
+2. create prettier.config.mjs file in root project with following configuration
+    ```
+    const config = {
+      trailingComma: 'es5',
+        tabWidth: 2,
+        semi: true,
+        singleQuote: true,
+      };
+
+      export default config;
+    ```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
