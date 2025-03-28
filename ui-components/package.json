@@ -78,13 +78,13 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "dev": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "declare": "tsc -p tsconfig.declaration.json",
     "dev:declare": "tsc -p tsconfig.declaration.json --watch",
-    "//dev:css": "tailwindcss src/ui-components.css -o dist/ui-components.css",
-    "dev": "rm -rf dist/ && tsc -p tsconfig.declaration.json && babel ./src --out-dir ./dist --watch --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
+    "dev:css": "tailwindcss src/ui-components.css -o dist/ui-components.css",
+    "watch": "rm -rf dist/ && tsc -p tsconfig.declaration.json && babel ./src --out-dir ./dist --watch --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
     "prepublish": "rm -rf dist/ && pnpm run declare && babel ./src --out-dir ./dist --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
     "//prepublish": "babel src/ui-components.ts --out-dir dist --copy-files --verbose --source-type=module"
   },

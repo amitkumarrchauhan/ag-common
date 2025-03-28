@@ -1,15 +1,18 @@
 'use client';
 
+// import { Logger } from '@ag-common/core-utils';
 import clsx from 'clsx';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import type { DemoProps } from './Demo.style';
 
-export const Demo = ({ className }: DemoProps) => {
+const logger = console;
+
+export const Demo: React.FC = ({ className }: DemoProps) => {
   useEffect(() => {
-    console.log("This is demo component's effect :)");
+    logger.log("This is demo component's effect :)");
   }, []);
 
-  console.log('Demo component rendered');
+  logger.log('Demo component rendered');
   //"ag-btn bg-red-300"
   // const className = demo({ ...props });
 

@@ -1,6 +1,10 @@
-import { check, EurekaClient, EurekaClientConfig } from './discovery/discovery.client';
+import {
+  check,
+  EurekaClient,
+  EurekaClientConfig,
+} from './discovery/discovery.client';
 import { Logger } from './logger/Logger';
 
-export { check, Logger, EurekaClient }
+export { check, EurekaClient, Logger };
 
-export type { EurekaClientConfig }
+export type { EurekaClientConfig };
