@@ -14,7 +14,7 @@ export const Demo = ({ className }: DemoProps) => {
   // const className = demo({ ...props });
 
   return (
-    <div className={clsx(className, 'ag-btn ag-btn-primary bg-green-300')}>
+    <div className={clsx(className, 'ag-btn ag-btn-primar bg-amber-400')}>
       Demo Component
     </div>
   );
