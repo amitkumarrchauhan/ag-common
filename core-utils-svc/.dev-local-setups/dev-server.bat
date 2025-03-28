@@ -1,0 +1,1 @@
+cmd "/C %pwd%/.dev-local-setups/dev-server.bat"
