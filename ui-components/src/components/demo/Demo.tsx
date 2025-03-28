@@ -1,11 +1,12 @@
 'use client';
 
-// import { Logger } from '@ag-common/core-utils';
+import { Logger } from '@ag-common/core-utils'; // <--- if core-util is used when it was having eureka server code, gives error
 import clsx from 'clsx';
 import React, { useEffect } from 'react';
 import type { DemoProps } from './Demo.style';
 
-const logger = console;
+const logger = Logger.getLogger('DEMO');
+// const logger = console;
 
 export const Demo: React.FC = ({ className }: DemoProps) => {
   useEffect(() => {

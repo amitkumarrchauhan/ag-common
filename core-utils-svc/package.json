@@ -1,17 +1,15 @@
 {
-  "name": "@ag-common/ui-core",
+  "name": "@ag-common/core-utils-svc",
   "version": "0.1.0",
-  "main": "dist/ui-core.js",
+  "main": "dist/core-utils-svc.js",
   "dependencies": {
-    "@ag-common/core-utils": "link:../core-utils",
-    "@ag-common/ui-components": "link:../ui-components",
+    "eureka-js-client": "^4.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.27.0",
     "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.26.9",
     "@babel/preset-typescript": "^7.27.0",
     "@eslint/eslintrc": "^3.3.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -20,6 +18,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/eureka-js-client": "^4.5.9",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.126",
     "@types/react": "^19.0.12",
@@ -68,7 +67,6 @@
     "tailwindcss": "^3.0.2",
     "terser-webpack-plugin": "^5.2.5",
     "typescript": "^4.9.5",
-    "util": "^0.12.5",
     "web-vitals": "^2.1.4",
     "webpack": "^5.64.4",
     "webpack-dev-server": "^4.6.0",
@@ -80,10 +78,10 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "declare": "tsc -p tsconfig.declaration.json",
-    "watch:declare": "tsc -p tsconfig.declaration.json --watch",
+    "watch:dt": "tsc -p tsconfig.declaration.json --watch",
     "watch": "rm -rf dist/ && pnpm run declare && babel ./src --out-dir ./dist --watch --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
     "prepublish": "rm -rf dist/ && pnpm run declare && babel ./src --out-dir ./dist --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
-    "//prepublish": "babel src/ui-core.ts --out-dir dist --copy-files --verbose --source-type=module"
+    "//prepublish": "babel src/core-utils-svc.ts --out-dir dist --copy-files --verbose --source-type=module"
   },
   "eslintConfig": {
     "extends": [

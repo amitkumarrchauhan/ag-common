@@ -34,6 +34,9 @@ class Logger {
 
     return loggerMap[prefix];
   }
+  static getLogger1(): string {
+    return 'this is dummy logger1';
+  }
 }
 
 export { Logger };

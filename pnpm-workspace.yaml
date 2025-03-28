@@ -1,4 +1,5 @@
 packages:
+  - core-utils-svc
   - core-utils
   - ui-components
   - ui-core
