@@ -14,7 +14,7 @@ const tailwindPostCssPlugin = require('@tailwindcss/postcss');
 const daisyUiPlugin = require('daisyui')(dasyUiPluginOptions);
 
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  content: ['./src/**/*.{js,jsx,ts,tsx,html}'],
   theme: {
     extend: {},
   },
