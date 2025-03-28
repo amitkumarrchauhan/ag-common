@@ -2,11 +2,9 @@
   "name": "@ag-common/ui-components",
   "version": "0.1.0",
   "main": "dist/ui-components.js",
-  "files": [
-    "global.css"
-  ],
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.17",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "daisyui": "^5.0.9",
     "react": "^19.0.0",
@@ -16,6 +14,7 @@
     "@babel/cli": "^7.27.0",
     "@babel/core": "^7.16.0",
     "@babel/preset-typescript": "^7.27.0",
+    "@eslint/eslintrc": "^3.3.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/dom": "^10.4.0",
@@ -26,6 +25,8 @@
     "@types/node": "^16.18.126",
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
     "autoprefixer": "^10.4.21",
     "babel-jest": "^27.4.2",
     "babel-loader": "^8.2.3",
@@ -39,7 +40,7 @@
     "css-minimizer-webpack-plugin": "^3.2.0",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
-    "eslint": "^8.3.0",
+    "eslint": "^8.57.1",
     "eslint-config-react-app": "^7.0.1",
     "eslint-webpack-plugin": "^3.1.1",
     "file-loader": "^6.2.0",
@@ -51,6 +52,7 @@
     "jest-watch-typeahead": "^1.0.0",
     "mini-css-extract-plugin": "^2.4.5",
     "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^6.2.1",
     "postcss-normalize": "^10.0.1",
@@ -80,16 +82,11 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "declare": "tsc -p tsconfig.declaration.json",
-    "declare_dev": "tsc -p tsconfig.declaration.json --watch",
+    "dev:declare": "tsc -p tsconfig.declaration.json --watch",
+    "//dev:css": "tailwindcss src/ui-components.css -o dist/ui-components.css",
     "dev": "rm -rf dist/ && tsc -p tsconfig.declaration.json && babel ./src --out-dir ./dist --watch --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
     "prepublish": "rm -rf dist/ && pnpm run declare && babel ./src --out-dir ./dist --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
     "//prepublish": "babel src/ui-components.ts --out-dir dist --copy-files --verbose --source-type=module"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
