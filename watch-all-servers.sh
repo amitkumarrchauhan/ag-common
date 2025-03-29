@@ -1,4 +1,4 @@
-
+# echo -ne "\e]0;YOUR TITLE HERE\a"
 
 if [[ $LOG_FOLDER -eq '' ]]; then
   export LOG_FOLDER="$PWD/logs"

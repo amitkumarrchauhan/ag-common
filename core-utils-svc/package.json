@@ -77,11 +77,11 @@
     "dev": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "dt.ts": "tsc -p tsconfig.declaration.json",
-    "watch:dt.ts": "tsc -p tsconfig.declaration.json --watch",
-    "watch": "rm -rf dist/ && pnpm run declare && babel ./src --out-dir ./dist --watch --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
-    "watch:win": "rmdir /S /Q dist 2>null & pnpm run dt.ts && babel ./src --out-dir ./dist --watch --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module",
-    "prepublish": "rm -rf dist/ && pnpm run declare && babel ./src --out-dir ./dist --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
+    "d.ts": "tsc -p tsconfig.declaration.json",
+    "watch:d.ts": "title core-utils-svc-D.TS && tsc -p tsconfig.declaration.json --watch",
+    "watch": "rm -rf dist/ && babel ./src --out-dir ./dist --watch --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
+    "watch:win": "title CORE-UTILS-SVC-JS && rmdir /S /Q dist 2>null & babel ./src --out-dir ./dist --watch --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module",
+    "prepublish": "rm -rf dist/ && pnpm run d.ts && babel ./src --out-dir ./dist --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
     "//prepublish": "babel src/core-utils-svc.ts --out-dir dist --copy-files --verbose --source-type=module"
   },
   "eslintConfig": {
