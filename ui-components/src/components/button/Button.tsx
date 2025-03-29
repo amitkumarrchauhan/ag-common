@@ -1,19 +1,27 @@
 'use client';
 
+import { Logger } from '@ag-common/core-utils';
 import clsx from 'clsx';
-import { Color } from '../../enums/color/Color.enum';
-import { ButtonProps, OnClickCallbackArg } from '../base/BaseProps';
+import React from 'react';
+import { OnClickCallbackArg } from '../base/BaseProps';
+import { Color } from './Button.enum';
+import { ButtonProps } from './Button.type';
 
-const getClassNames = (btnProps: ButtonProps) => {
-  const { color = Color.NEUTRAL } = btnProps;
-  const cls = clsx(color);
-
-  return cls;
-};
+const logger = Logger.getLogger('Button');
 
 const Button: React.FC<ButtonProps> = (props) => {
   const { id, text, ref, children, onClick, ...restProps } = props;
-  console.log('rest => ', restProps);
+  const {
+    color = Color.NEUTRAL,
+    styleTo,
+    behavior,
+    size,
+    modifier,
+    className,
+    ...otherProps
+  } = restProps;
+
+  logger.log('Button.render');
 
   const onButtonClick = () => {
     if (onClick) onClick({ id, text } as OnClickCallbackArg);
@@ -23,8 +31,18 @@ const Button: React.FC<ButtonProps> = (props) => {
     <button
       ref={ref}
       id={id}
-      className={clsx('ag-btn', getClassNames(props))}
+      data-testid="button"
+      className={clsx(
+        'ag-btn',
+        color,
+        styleTo,
+        behavior,
+        size,
+        modifier,
+        className
+      )}
       onClick={onButtonClick}
+      {...otherProps}
     >
       {children || text}
     </button>
