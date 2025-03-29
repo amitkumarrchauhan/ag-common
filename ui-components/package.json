@@ -86,7 +86,7 @@
     "dev:css": "tailwindcss src/ui-components.css -o dist/ui-components.css",
     "watch:dt.ts": "tsc -p tsconfig.declaration.json --watch",
     "watch": "rm -rf dist/ && tsc -p tsconfig.declaration.json && babel ./src --out-dir ./dist --watch --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
-    "watch:win": "rmdir /S /Q dist 2>null & pnpm run dt.ts && babel ./src --out-dir ./dist --watch --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module",
+    "watch:win": "set NODE_ENV=development& rmdir /S /Q dist 2>null & pnpm run dt.ts && babel ./src --out-dir ./dist --watch --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module",
     "prepublish": "rm -rf dist/ && pnpm run declare && babel ./src --out-dir ./dist --extensions .ts,.tsx --ignore **/*.test.ts,**/*.test.tsx --verbose --source-type=module && cp package.json ./dist",
     "//prepublish": "babel src/ui-components.ts --out-dir dist --copy-files --verbose --source-type=module"
   },

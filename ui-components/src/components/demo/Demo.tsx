@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import React, { useEffect } from 'react';
 import type { DemoProps } from './Demo.style';
 
-const logger = Logger.getLogger('DEMO');
+const logger = Logger.getLogger('DEMO1');
 // const logger = console;
 
 export const Demo: React.FC = ({ className }: DemoProps) => {
