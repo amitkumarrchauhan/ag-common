@@ -11,9 +11,7 @@ function App() {
       <div className="top-10">
         this div is having top 10 wiht respect to app div
       </div>
-      <Button onClick={() => alert('clicked')} text={'Kya re'}>
-        Preferred
-      </Button>
+      <Button text={'Kya re'} />
       <Demo />
     </div>
   );

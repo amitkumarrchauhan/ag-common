@@ -1,14 +1,8 @@
 'use client';
 
 import clsx from 'clsx';
-import { ReactNode, Ref } from 'react';
 import { Color } from '../../enums/color/Color.enum';
-import { ButtonBaseProps, OnClickCallbackArg } from '../base/BaseProps';
-
-export type ButtonProps = ButtonBaseProps & {
-  children?: ReactNode;
-  ref?: Ref<HTMLButtonElement>;
-};
+import { ButtonProps, OnClickCallbackArg } from '../base/BaseProps';
 
 const getClassNames = (btnProps: ButtonProps) => {
   const { color = Color.NEUTRAL } = btnProps;
@@ -17,7 +11,7 @@ const getClassNames = (btnProps: ButtonProps) => {
   return cls;
 };
 
-const Button: React.FC = (props: ButtonProps) => {
+const Button: React.FC<ButtonProps> = (props) => {
   const { id, text, ref, children, onClick, ...restProps } = props;
   console.log('rest => ', restProps);
 
@@ -32,8 +26,7 @@ const Button: React.FC = (props: ButtonProps) => {
       className={clsx('ag-btn', getClassNames(props))}
       onClick={onButtonClick}
     >
-      {children}
-      {!children && text}
+      {children || text}
     </button>
   );
 };

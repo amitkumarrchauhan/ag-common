@@ -45,7 +45,7 @@ export const demo = cva(['font-semibold', 'border', 'rounded'], {
   },
 });
 
-export type ButtonProps = VariantProps<typeof demo>;
+export type VariantPropsType = VariantProps<typeof demo>;
 
 export type DemoProps = {
   className?: string;

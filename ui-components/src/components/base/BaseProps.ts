@@ -1,3 +1,4 @@
+import { ButtonHTMLAttributes, ReactNode, Ref } from 'react';
 import { Color } from '../../enums/color/Color.enum';
 
 export type OnClickCallbackArg = {
@@ -16,6 +17,12 @@ export type BaseProps = {
   modifier?: string;
 };
 
-export type ButtonBaseProps = BaseProps & {
-  onClick?: (onClickCallbackArg: OnClickCallbackArg) => void;
+export type ButtonBaseProps = BaseProps &
+  ButtonHTMLAttributes<HTMLButtonElement> & {
+    onClick?: (onClickCallbackArg: OnClickCallbackArg) => void;
+  };
+
+export type ButtonProps = ButtonBaseProps & {
+  children?: ReactNode;
+  ref?: Ref<HTMLButtonElement>;
 };
